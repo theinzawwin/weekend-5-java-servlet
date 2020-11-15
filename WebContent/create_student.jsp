@@ -1,11 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>New Student</title>
 </head>
 <body>
-<h3>Hello Servlet Testing</h3>
+<jsp:include page="menu.jsp"></jsp:include>
+<h3>Manage Student</h3>
 <form action="StudentServlet" method="post">
 <label>Name:</label><input type="text" name="name" /><br>
 <label>Nrc:</label><input type="text" name="nrc" /><br>

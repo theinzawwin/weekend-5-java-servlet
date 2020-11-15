@@ -9,14 +9,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="menu.jsp"></jsp:include>
 <h3>Student List</h3>
+<label>${message}</label>
 <table>
 	<thead>
 	<tr>
 		<th>No</th>
 		<th>Name</th>
-		<th>Roll No</th>
 		<th>Nrc</th>
+		<th>Address</th>
+		<th>Roll No</th>
 	</tr>
 	</thead>
 	<tbody>
@@ -25,8 +28,9 @@
 		<tr>
 		<td>${std.id}</td>
 			<td>${std.name }</td>
-			<td>${std.rollNo }</td>
 			<td>${std.nrc }</td>
+			<td>${std.address }</td>
+			<td>${std.rollNo }</td>
 			</tr>
 		</c:forEach>
 	</tbody>

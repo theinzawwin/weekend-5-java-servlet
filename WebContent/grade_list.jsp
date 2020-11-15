@@ -9,12 +9,24 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="menu.jsp"></jsp:include>
 <h3>Grade List</h3>
-<h4>${name }</h4>
-<p>${phone }</p>
-<b>${user}</b><br>
-<c:forEach var="j" begin="1" end="3">  
-   Item <c:out value="${j}"/><p>  
+<table>
+	<thead>
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Teacher Name</th>
+		</tr>
+	</thead>
+	<tbody>
+	<c:forEach items="${gradeList }" var="g" varStatus="row">  
+    	<td>${row.count }</td>
+    	<td>${g.name }</td>
+    	<td>${g.teacherName }</td>
 </c:forEach>  
+	</tbody>
+</table>
+
 </body>
 </html>
