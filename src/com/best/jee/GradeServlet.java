@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.best.dao.GradeDao;
 import com.best.jee.model.Grade;
@@ -36,8 +37,11 @@ public class GradeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String action=request.getParameter("action");
+		HttpSession session=request.getSession();
+		session.setAttribute("userName", "bestBright");
 		RequestDispatcher create_rd=request.getRequestDispatcher("create_grade.jsp");
 		RequestDispatcher list_rd=request.getRequestDispatcher("grade_list.jsp");
+		action="new";
 		switch(action) {
 		case "new":
 			create_rd.forward(request, response);

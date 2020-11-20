@@ -41,8 +41,10 @@ public class StudentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.setContentType("text/html");
 		//response.getWriter().print("<h3>Welcome From B&B Institute</h3><p>Your future will be better</p>");
+		System.out.println("In student servlet");
 		RequestDispatcher rdlist=request.getRequestDispatcher("student.jsp");
 		String action=request.getParameter("action");
+		action="new";
 		switch(action) {
 		case "new":
 			RequestDispatcher rd=request.getRequestDispatcher("create_student.jsp");
